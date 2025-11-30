@@ -105,19 +105,13 @@ y_train, y_test = y.iloc[:split_idx], y.iloc[split_idx:]
 print("✔ Train:", X_train.shape, " Test:", X_test.shape)
 print("✔ Train class distribution:\n", y_train.value_counts())
 
-# =========================================================
-# STEP 5 — BALANCE USING SMOTE
-# =========================================================
-
 print("✔ Applying SMOTE balancing...")
 sm = SMOTE(random_state=42)
 X_train_sm, y_train_sm = sm.fit_resample(X_train, y_train)
 
 print("✔ After SMOTE class balance:\n", y_train_sm.value_counts())
 
-# =========================================================
-# STEP 6 — TRAIN MODEL (RandomForest)
-# =========================================================
+
 
 print("✔ Training RandomForest model...")
 
@@ -132,9 +126,6 @@ model = RandomForestClassifier(
 
 model.fit(X_train_sm, y_train_sm)
 
-# =========================================================
-# STEP 7 — EVALUATE MODEL
-# =========================================================
 
 print("\n================ DEFAULT THRESHOLD REPORT ================")
 y_pred = model.predict(X_test)
