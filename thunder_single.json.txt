@@ -1,0 +1,10 @@
+{
+  "daily_km": 180,
+  "cumulative_km": 90500,
+  "brake_temp_avg": 118.5,
+  "hvac_faults": 5,
+  "door_faults": 1,
+  "rolling_7d_km": 1280,
+  "rolling_7d_hvac": 12,
+  "rolling_7d_brake_temp": 97.2
+}
