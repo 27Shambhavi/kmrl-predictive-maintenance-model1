@@ -7,8 +7,6 @@ import os
 import requests
 
 st.set_page_config(page_title="KMRL - Predictive Maintenance (Model-1)", layout="wide")
-
-# ---------- Configuration ----------
 MODEL_FILE = os.getenv("MODEL_PATH", "model1_failure_risk_REAL.pkl")
 USE_FLASK = False  # if True, Streamlit will call the Flask API instead of loading the model
 
